@@ -1,6 +1,24 @@
 import requests
 import pandas as pd
 
+# 参照するオープンデータ：OpenWeatherMap API
+# 名称：OpenWeatherMap API（https://openweathermap.org/api）
+# 概要：世界中の天気情報（現在・予報・過去）を提供するオープンAPI。
+
+# エンドポイント：
+#   ・https://api.openweathermap.org/data/2.5/weather
+#   ・現在の天気情報を都市名・緯度経度・郵便番号などで取得できる。
+
+# 機能：
+#   ・気温（現在・最低・最高）、湿度、天気、風速などの取得。
+#   ・「units=metric」で摂氏（°C）に変換。
+#   ・「lang=ja」で日本語の天気説明を取得。
+
+# 使い方：
+#   ・APIキー（appid）を取得して、q=都市名,JPを指定してGETリクエスト。
+#   ・天気情報はJSONで返される。
+
+
 # OpenWeatherMap用のAPIキー
 APP_ID = "b17dfaab66f9ca5e5953afd04ad7fa94"
 
